@@ -47,7 +47,7 @@
 
   <logger name="ApplicationLogger" level="INFO" additivity="false">
     <appender-ref ref="AO_FILE" />
-    <appender-ref ref="STDOUT" />
+    <!-- <appender-ref ref="STDOUT" /> -->
   </logger>
 
   <!-- TXN_LOGGER로 찍힌 로그만 txn.log로 분리 -->

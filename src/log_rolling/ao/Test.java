@@ -12,10 +12,16 @@ public class Test {
 
         System.out.println("Starting Application Operation Log Simulation...");
 
-        for (int i = 1; i <= 10000000; i++) {
+        int count = 0;
+        for (int i = 1; i <= 1_000_000; i++) {
 
             AoLog logData = randomAoLog(i);
             logger.log(logData);
+            
+            count++;
+			if (count % 100000 == 0) {
+				System.out.println(count + "건 로그 기록 완료");
+			}
         }
 
         System.out.println("Done. Check logs/ao/app-ops.log and archive folder.");
